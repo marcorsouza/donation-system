@@ -1,0 +1,177 @@
+/* Layout CSS */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Fundo mais escuro */
+    color: #fff; /* Cor do texto branca */
+    margin: 0; /* Remove margens */
+    display: flex; /* Usa flexbox para o layout */
+    flex-direction: column; /* Alinha itens verticalmente */
+}
+
+.header, .footer {
+    width: 100%;
+    background-color: #162447; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaçamento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    
+    height: 100vh;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    flex: 1; /* Expande para ocupar o espaço disponível */
+}
+
+.logo {
+    font-size: 1.5em; /* Tamanho da fonte */
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px; /* Espaçamento entre ícone e texto */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.nav {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.nav a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1em; /* Tamanho da fonte */
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Espaçamento à esquerda */
+}
+
+.search input {
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--btn-bg-color); /* Cor de fundo do botão */
+    color: white;
+    cursor: pointer;
+}
+
+.search button i {
+    font-size: 1em; /* Tamanho do ícone */
+}
+
+.profile {
+    font-size: 1.5em; /* Tamanho do ícone */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    padding: 10px 0; /* Espaçamento interno */
+}
+
+.footer-nav {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.footer-nav a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 0.9em; /* Tamanho da fonte */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.main-dashboard {
+    flex: 1; /* Permite que o main cresça para preencher o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.main-grid {
+    flex: 1; /* Permite que o main cresça para preencher o espaço disponível */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: flex-start; /* Alinha os itens no início */
+    align-items: stretch; /* Alinha os itens horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.dashboard {
+    display: flex; /* Define o display como flex */
+    justify-content: space-around; /* Espaça os cards uniformemente */
+    flex-wrap: wrap; /* Permite quebra de linha dos cards se necessário */
+    width: 100%;
+    max-width: 1200px; /* Largura máxima do dashboard */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header, .footer {
+        justify-content: center;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search {
+        margin-left: 0; /* Remove margem em telas menores */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .dashboard {
+        flex-direction: column; /* Coloca os cards em coluna em telas menores */
+        align-items: center;
+    }
+
+    .card {
+        min-width: 80%; /* Ajusta a largura mínima dos cards em telas menores */
+    }
+}

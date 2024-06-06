@@ -1,0 +1,40 @@
+/* Breadcrumbs CSS */
+.breadcrumbs {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os breadcrumbs à esquerda */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--breadcrumb-bg-color);
+    color: #aaa;
+    font-size: 1em;
+}
+
+.breadcrumbs a {
+    display: flex;
+    align-items: center;
+    color: var(--breadcrumb-color);
+    text-decoration: none;
+    margin-right: 10px; /* Espaçamento entre os itens */
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a i {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.breadcrumbs a:hover {
+    color: var(--breadcrumb-hover-color); /* Cor diferente ao passar o mouse */
+}
+
+.breadcrumbs .active {
+    color: var(--breadcrumb-active-color); /* Cor do item ativo */
+    font-weight: bold;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+    color: #999;
+}

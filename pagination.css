@@ -1,0 +1,32 @@
+/* Estilos da Paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    background-color: var(--btn-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+    background-color: var(--btn-bg-hover-color);
+}
+
+.page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-btn.active {
+    background-color: var(--btn-active-bg-color);
+    color: var(--btn-active-text-color);
+}

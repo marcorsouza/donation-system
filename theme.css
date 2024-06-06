@@ -1,0 +1,65 @@
+/* Tema CSS */
+body {
+    --background-color: #1a1a2e; /* Cor de fundo padrão */
+    --link-color: #2f7a31; /* Cor de link padrão */
+    --text-color: #fff; /* Cor do texto padrão */
+    --btn-bg-color: #2f7a31; /* Cor de fundo dos botões */
+    --btn-bg-hover-color: #45a049; /* Cor de fundo dos botões ao passar o mouse */
+    --btn-active-bg-color: #1b5e20; /* Cor de fundo do botão ativo */
+    --btn-active-text-color: #fff; /* Cor do texto do botão ativo */
+    --breadcrumb-bg-color: aliceblue; /* Cor de fundo dos breadcrumbs */
+    --breadcrumb-color: #2f7a31; /* Cor dos breadcrumbs */
+    --breadcrumb-hover-color: #45a049; /* Cor dos breadcrumbs ao passar o mouse */
+    --breadcrumb-active-color: #333; /* Cor do item ativo dos breadcrumbs */
+}
+
+body.theme-page-1 {
+    --background-color: #1a1a2e;
+    --link-color: #2f7a31;
+    --text-color: #fff;
+    --btn-bg-color: #2f7a31;
+    --btn-bg-hover-color: #45a049;
+    --btn-active-bg-color: #1b5e20;
+    --btn-active-text-color: #fff;
+    --breadcrumb-bg-color: aliceblue;
+    --breadcrumb-color: #2f7a31;
+    --breadcrumb-hover-color: #45a049;
+    --breadcrumb-active-color: #333;
+}
+
+body.theme-page-2 {
+    --background-color: #ffffff;
+    --link-color: #3535af;
+    --text-color: #000;
+    --btn-bg-color: #3535af;
+    --btn-bg-hover-color: #000099;
+    --btn-active-bg-color: #1a237e;
+    --btn-active-text-color: #fff;
+    --breadcrumb-bg-color: #e0e0e0;
+    --breadcrumb-color: #3535af;
+    --breadcrumb-hover-color: #000099;
+    --breadcrumb-active-color: #000;
+}
+
+body.theme-page-3 {
+    --background-color: #333333;
+    --link-color: #b32323;
+    --text-color: #ffffff;
+    --btn-bg-color: #b32323;
+    --btn-bg-hover-color: #cc0000;
+    --btn-active-bg-color: #b71c1c;
+    --btn-active-text-color: #fff;
+    --breadcrumb-bg-color: aliceblue;
+    --breadcrumb-color: #b32323;
+    --breadcrumb-hover-color: #cc0000;
+    --breadcrumb-active-color: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}

@@ -1,0 +1,193 @@
+/* Estilos da Grid */
+.grid-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f9; /* Div clara */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.grid-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.grid-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.grid-actions .btn-add {
+    background-color: var(--btn-bg-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.grid-actions .btn-add:hover {
+    background-color: var(--btn-bg-hover-color);
+}
+
+.grid-filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.grid-filters label {
+    font-size: 1em;
+    color: #333;
+}
+
+.grid-filters input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.grid-filters .btn-filter {
+    background-color: var(--btn-bg-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.grid-filters .btn-filter:hover {
+    background-color: var(--btn-bg-hover-color);
+}
+
+.grid-content {
+    background-color: #fff; /* Fundo branco para melhor visualização */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grid-row {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #2a2a3e; /* Cor do texto principal */
+}
+
+.grid-row:nth-child(odd) {
+    background-color: #f9f9f9; /* Cor zebrada */
+}
+
+.grid-header-row {
+    font-weight: bold;
+    background-color: #2a2a3e;
+    color: #111010;
+}
+
+.grid-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: left; /* Alinha o texto à esquerda */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.grid-cell[data-label]::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: none;
+}
+
+.grid-cell:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 1.5em; /* Aumenta o tamanho dos ícones */
+    transition: color 0.3s ease;
+}
+
+.btn-edit:hover {
+    color: var(--btn-bg-color);
+}
+
+.btn-delete:hover {
+    color: #F44336;
+}
+
+/* Adicionando hover para as linhas */
+.grid-row:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-header, .grid-filters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .grid-header-row {
+        display: none;
+    }
+
+    .grid-row {
+        flex-direction: column;
+        padding: 10px; /* Adiciona padding para melhorar a visualização */
+    }
+
+    .grid-cell {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0; /* Adiciona padding para melhorar a visualização */
+    }
+
+    .grid-cell[data-label]::before {
+        display: inline-block;
+        color: #999;
+        padding-right: 10px; /* Espaçamento entre label e valor */
+    }
+
+    .grid-cell:last-child {
+        justify-content: center;
+        padding: 10px 0; /* Adiciona padding para melhorar a visualização */
+    }
+
+    .btn-edit, .btn-delete {
+        margin: 0 5px;
+    }
+}

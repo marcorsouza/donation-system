@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Dashboard - Grid</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="breadcrumbs.css">
+    <link rel="stylesheet" href="filters.css">
+    <link rel="stylesheet" href="pagination.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link para ícones -->
+</head>
+<body class="theme-page-1">
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <i class="fas fa-donate"></i> Donation Dashboard
+            </div>
+        </div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="#">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="profile">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+    <main class="main-grid">
+        <div class="content-wrapper">
+            <div class="breadcrumbs">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <span>/</span>
+                <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <span>/</span>
+                <a href="#" class="active"><i class="fas fa-donate"></i> Donations</a>
+            </div>
+            <div class="grid-container">
+                <div class="grid-header">
+                    <h2>Donations Grid</h2>
+                    <div class="grid-actions">
+                        <button id="open-modal-btn" class="btn-add"><i class="fas fa-plus"></i> Add Donation</button>
+                    </div>
+                </div>
+                <div class="grid-filters">
+                    <div class="filter-group">
+                        <label for="filter-date">Date:</label>
+                        <input type="date" id="filter-date">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-amount">Amount:</label>
+                        <input type="number" id="filter-amount">
+                    </div>
+                    <button class="btn-filter"><i class="fas fa-filter"></i> Filter</button>
+                </div>
+                <div class="grid-content">
+                    <div class="grid">
+                        <div class="grid-row grid-header-row">
+                            <div class="grid-cell">ID</div>
+                            <div class="grid-cell">Donor</div>
+                            <div class="grid-cell">Amount</div>
+                            <div class="grid-cell">Date</div>
+                            <div class="grid-cell">Actions</div>
+                        </div>
+                        <!-- Rows da grid -->
+                        <div class="grid-row">
+                            <div class="grid-cell" data-label="ID">1</div>
+                            <div class="grid-cell" data-label="Donor">John Doe</div>
+                            <div class="grid-cell" data-label="Amount">$100</div>
+                            <div class="grid-cell" data-label="Date">2024-01-01</div>
+                            <div class="grid-cell" data-label="Actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell" data-label="ID">2</div>
+                            <div class="grid-cell" data-label="Donor">Jane Smith</div>
+                            <div class="grid-cell" data-label="Amount">$150</div>
+                            <div class="grid-cell" data-label="Date">2024-02-01</div>
+                            <div class="grid-cell" data-label="Actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell" data-label="ID">3</div>
+                            <div class="grid-cell" data-label="Donor">Mike Johnson</div>
+                            <div class="grid-cell" data-label="Amount">$200</div>
+                            <div class="grid-cell" data-label="Date">2024-03-01</div>
+                            <div class="grid-cell" data-label="Actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell" data-label="ID">4</div>
+                            <div class="grid-cell" data-label="Donor">Alice Brown</div>
+                            <div class="grid-cell" data-label="Amount">$250</div>
+                            <div class="grid-cell" data-label="Date">2024-04-01</div>
+                            <div class="grid-cell" data-label="Actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell" data-label="ID">5</div>
+                            <div class="grid-cell" data-label="Donor">Chris White</div>
+                            <div class="grid-cell" data-label="Amount">$300</div>
+                            <div class="grid-cell" data-label="Date">2024-05-01</div>
+                            <div class="grid-cell" data-label="Actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button class="page-btn">Previous</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Donation Dashboard. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Donation</h2>
+            <form id="donation-form">
+                <label for="donor-name">Donor Name:</label>
+                <input type="text" id="donor-name" name="donor-name" required>
+
+                <label for="donation-amount">Amount:</label>
+                <input type="number" id="donation-amount" name="donation-amount" required>
+
+                <label for="donation-date">Date:</label>
+                <input type="date" id="donation-date" name="donation-date" required>
+
+                <button type="submit" class="btn-submit">Add Donation</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

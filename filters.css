@@ -1,0 +1,80 @@
+/* Estilos dos Filtros */
+.grid-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-filters .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grid-filters label {
+    font-size: 1em;
+    color: #333;
+}
+
+.grid-filters input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1em;
+    width: 100%;
+}
+
+.grid-filters .btn-filter {
+    background-color: var(--btn-bg-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Garante que o botão ocupe todo o espaço disponível */
+}
+
+.grid-filters .btn-filter:hover {
+    background-color: var(--btn-bg-hover-color);
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+    .grid-filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .grid-filters .filter-group {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex: 1; /* Garante que o grupo de filtro ocupe todo o espaço disponível */
+    }
+
+    .grid-filters label {
+        width: auto; /* Permite que o label ocupe apenas o espaço necessário */
+    }
+
+    .grid-filters input {
+        width: auto;
+        flex: 1; /* Garante que o input ocupe o espaço disponível no grupo */
+    }
+
+    .grid-filters .btn-filter {
+        width: auto; /* Permite que o botão ocupe apenas o espaço necessário */
+        flex: 0 1 auto; /* Garante que o botão não cresça para além do necessário */
+    }
+}
